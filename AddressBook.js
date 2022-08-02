@@ -19,6 +19,42 @@ let contact1 = new Contact("Sahil","Pawar","Chiplun","Ratnagiri","MH",415601,735
 let contact2 = new Contact("Sai","Patil","karad","Satara","MH",415901,7350310466,"saipatil1004@gmail.com");
 contactList.push(contact1);
 contactList.push(contact2);
+console.log("List of contact : ");
+for (let i = 0; i < contactList.length; i++) {
+    console.log(contactList[i]);   
+}
+
+function editName(firstNames,property,newValue) {
+    switch (property) {
+        case "FirstName":
+            contactList.find((Contact)=>Contact.firstName==firstNames).firstName = newValue;
+            break;
+        case "LastName":
+            contactList.find((Contact)=>Contact.firstName==firstNames).lastName = newValue;
+            break;
+        case "Address":
+            contactList.find((Contact)=>Contact.firstName==firstNames).address = newValue;
+            break;
+        case "City":
+            contactList.find((Contact)=>Contact.firstName==firstNames).city = newValue;
+            break;
+        case "State":
+            contactList.find((Contact)=>Contact.firstName==firstNames).state = newValue;
+            break;
+        case "Zip":
+            contactList.find((Contact)=>Contact.firstName==firstNames).zip = newValue;
+            break;
+        case "PhoneNumber":
+            contactList.find((Contact)=>Contact.firstName==firstNames).phoneNumber = newValue;
+            break;
+        case "EmailID":
+            contactList.find((Contact)=>Contact.firstName==firstNames).email = newValue;
+            break;
+        }
+}
+console.log("Edit The Contact :");
+editName("Sahil", "City", "khed");
+console.log("After edit the contact :")
 for (let i = 0; i < contactList.length; i++) {
     console.log(contactList[i]);   
 }
