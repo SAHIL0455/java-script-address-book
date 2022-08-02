@@ -97,3 +97,7 @@ printAddressBook();
 console.log("Detele the contact");
 deleteContact("Sai","City");
 printAddressBook();
+
+
+console.log("Count the contact in addressBook");
+console.log(contactList.length);
